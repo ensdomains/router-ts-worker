@@ -1,0 +1,44 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "files": {
+    "ignore": [".wrangler", "**/node_modules", "tsconfig.json", "tsconfig.*.json"]
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "noUnusedVariables": "error"
+      },
+      "style": {
+        "noNonNullAssertion": "off",
+        "useShorthandArrayType": "error"
+      },
+      "suspicious": {
+        "noExplicitAny": "error",
+        "noRedeclare": "error"
+      },
+      "nursery": {
+        "useImportType": "error"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "trailingComma": "all",
+      "semicolons": "asNeeded",
+      "arrowParentheses": "always"
+    }
+  },
+  "organizeImports": {
+    "enabled": true
+  }
+}
